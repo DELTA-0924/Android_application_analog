@@ -1,0 +1,46 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white"
+    tools:context=".AddTaskDisplay">
+
+<EditText
+android:id="@+id/editTextTitle"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:hint="Title name task"
+    android:background="#4CAF50"
+    android:padding="8dp"
+    android:layout_marginBottom="8dp"/>
+
+<EditText
+android:id="@+id/editTextDescription"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:hint="description  task"
+    android:background="#4CAF50"
+android:textColor="@android:color/black"
+android:padding="8dp"
+android:layout_marginBottom="8dp"/>
+
+    <Button
+        android:id="@+id/buttonAddTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:alpha="0.7"
+        android:background="#B0D314"
+        android:backgroundTint="#D61B1B"
+        android:elevation="8dp"
+        android:text="Submit"
+        android:textColor="@android:color/white" />
+
+    </LinearLayout>

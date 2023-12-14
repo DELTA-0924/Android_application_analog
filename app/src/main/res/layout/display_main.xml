@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/buttonAddTaskScreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#88FF21"
+        android:text="Add Task"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:padding="12dp"
+        android:textColor="#FFFFFF"
+        android:outlineSpotShadowColor="#00000000"
+        android:outlineAmbientShadowColor="#00000000"
+        android:elevation="4dp"
+        android:stateListAnimator="@null"
+        android:backgroundTint="#88FF21"
+        android:foreground="?attr/selectableItemBackgroundBorderless"/>
+
+    <Button
+        android:id="@+id/buttonTaskListScreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#88FF21"
+        android:text="List Tasks"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:padding="12dp"
+        android:textColor="#FFFFFF"
+        android:outlineSpotShadowColor="#00000000"
+        android:outlineAmbientShadowColor="#00000000"
+        android:elevation="4dp"
+        android:stateListAnimator="@null"
+        android:backgroundTint="#88FF21"
+        android:foreground="?attr/selectableItemBackgroundBorderless"/>
+</LinearLayout>
