@@ -50,6 +50,7 @@ public class CustomTaskAdapter extends RecyclerView.Adapter<CustomTaskAdapter.Cu
         holder.checkBoxTask.setChecked(currentTask.isCompleted());
         holder.textViewTitle.setText(currentTask.getTitle());
         holder.textViewDescription.setText(currentTask.getDescription());
+        holder.textViewTime.setText(currentTask.getTime());
 
         holder.itemView.setOnLongClickListener(v -> {
             if (onTaskLongClickListener != null) {
@@ -76,12 +77,13 @@ public class CustomTaskAdapter extends RecyclerView.Adapter<CustomTaskAdapter.Cu
         CheckBox checkBoxTask;
         TextView textViewTitle;
         TextView textViewDescription;
-
+        TextView textViewTime;
         public CustomTaskViewHolder(@NonNull View itemView) {
             super(itemView);
             checkBoxTask = itemView.findViewById(R.id.checkBoxTask);
             textViewTitle = itemView.findViewById(R.id.textViewTitle);
             textViewDescription = itemView.findViewById(R.id.textViewDescription);
+            textViewTime=itemView.findViewById(R.id.textViewTime);
         }
     }
 }

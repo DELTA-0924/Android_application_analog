@@ -27,7 +27,15 @@ android:hint="description  task"
 android:textColor="@android:color/black"
 android:padding="8dp"
 android:layout_marginBottom="8dp"/>
-
+<EditText
+    android:id="@+id/editTextTime"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="HH:mm:ss"
+    android:background="#4CAF50"
+    android:textColor="@android:color/black"
+    android:padding="8dp"
+    android:layout_marginBottom="8dp"/>
     <Button
         android:id="@+id/buttonAddTask"
         android:layout_width="wrap_content"

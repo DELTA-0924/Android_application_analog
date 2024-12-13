@@ -65,7 +65,9 @@ public class TaskListDisplay extends AppCompatActivity implements CustomTaskAdap
                 TaskContract.TaskEntry._ID,
                 TaskContract.TaskEntry.COLUMN_TITLE,
                 TaskContract.TaskEntry.COLUMN_DESCRIPTION,
-                TaskContract.TaskEntry.COLUMN_COMPLETED
+                TaskContract.TaskEntry.COLUMN_COMPLETED,
+                TaskContract.TaskEntry.COLUMN_TIME
+
         };
 
         Cursor cursor = null;
@@ -88,7 +90,8 @@ public class TaskListDisplay extends AppCompatActivity implements CustomTaskAdap
                         String description = cursor.getString(cursor.getColumnIndex(TaskContract.TaskEntry.COLUMN_DESCRIPTION));
                         boolean completed = cursor.getInt(cursor.getColumnIndex(TaskContract.TaskEntry.COLUMN_COMPLETED)) == 1;
                         long id = cursor.getInt(cursor.getColumnIndex(TaskContract.TaskEntry._ID));
-                        tasks.add(new Task(title, description, completed, id));
+                        String timeString = cursor.getString(cursor.getColumnIndex(TaskContract.TaskEntry.COLUMN_TIME));
+                        tasks.add(new Task(title, description, completed, id,timeString));
                     } catch (Exception ex) {
                         Log.d("Exception in cursor ", "type" + ex.getMessage());
                     }

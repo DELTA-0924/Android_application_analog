@@ -7,18 +7,21 @@ public class Task implements Parcelable {
     private String title;
     private String description;
     private boolean completed;
+    private String time;
 
-    public Task(String title, String description, boolean completed,long id) {
+    public Task(String title, String description, boolean completed,long id,String time) {
         this.title = title;
         this.description = description;
         this.completed = completed;
         this.id=id;
+        this.time=time;
     }
     protected Task(Parcel in) {
         id = in.readLong();
         title = in.readString();
         description = in.readString();
         completed = in.readByte() != 0;
+        time = in.readString();
     }
     public static final Creator<Task> CREATOR = new Creator<Task>() {
         @Override
@@ -37,6 +40,9 @@ public class Task implements Parcelable {
 
     public String getDescription() {
         return description;
+    }
+    public String getTime(){
+        return time;
     }
 
     public boolean isCompleted() {
@@ -57,6 +63,7 @@ public class Task implements Parcelable {
         dest.writeString(title);
         dest.writeString(description);
         dest.writeByte((byte) (completed ? 1 : 0));
+        dest.writeString(time);
     }
 
     @Override

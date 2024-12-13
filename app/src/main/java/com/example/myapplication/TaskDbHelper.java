@@ -26,8 +26,9 @@ public class TaskDbHelper extends SQLiteOpenHelper {
                 TaskContract.TaskEntry.TABLE_NAME + " (" +
                 TaskContract.TaskEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 TaskContract.TaskEntry.COLUMN_TITLE + " TEXT NOT NULL, " +
-                TaskContract.TaskEntry.COLUMN_DESCRIPTION + " TEXT,"+
-                TaskContract.TaskEntry.COLUMN_COMPLETED + " INTEGER DEFAULT 0)";
+                TaskContract.TaskEntry.COLUMN_DESCRIPTION + " TEXT," +
+                TaskContract.TaskEntry.COLUMN_COMPLETED + " INTEGER DEFAULT 0," +
+                TaskContract.TaskEntry.COLUMN_TIME + " TIME)";
 
         db.execSQL(SQL_CREATE_TASKS_TABLE);
     }
@@ -59,7 +60,8 @@ public class TaskDbHelper extends SQLiteOpenHelper {
                 TaskContract.TaskEntry._ID,
                 TaskContract.TaskEntry.COLUMN_TITLE,
                 TaskContract.TaskEntry.COLUMN_DESCRIPTION,
-                TaskContract.TaskEntry.COLUMN_COMPLETED
+                TaskContract.TaskEntry.COLUMN_COMPLETED,
+                TaskContract.TaskEntry.COLUMN_TIME
         };
         return tasks;
     }

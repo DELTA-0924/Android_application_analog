@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button buttonAddTaskScreen = findViewById(R.id.buttonAddTaskScreen);
         Button buttonTaskListScreen = findViewById(R.id.buttonTaskListScreen);
-
+        NotificationHelper.createNotificationChannel(this);
          dbHelper = new TaskDbHelper(this);
 
         buttonAddTaskScreen.setOnClickListener(new View.OnClickListener() {
